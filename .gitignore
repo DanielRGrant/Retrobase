@@ -1,11 +1,4 @@
-*.pyc
-*~
-/.vscode
-__pycache__
 myvenv
-db.sqlite3
-/static
-.DS_Store
 retrobase_proj.sublime-project
 retrobase_proj.sublime-workspace
 /upload_data

@@ -25,7 +25,7 @@ SECRET_KEY = '%$k#updcpr=75@@i=6j!x*_g5gdkovt(_g4nwb5i#_b((rdpg('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['EC2_DNS_NAME']
+ALLOWED_HOSTS = ['ec2-34-239-45-231.compute-1.amazonaws.com',"localhost"]
 
 
 # Application definition

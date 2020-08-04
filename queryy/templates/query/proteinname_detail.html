@@ -1,0 +1,12 @@
+{%extends "query/base.html" %}
+{% block content %}	
+	<h1>Protein Name: {{object.name}}</h1>
+	<p>All information presented on this page is acquired from the <a href={{object.uniprot_link}} >Uniprot record, {{object.uniprot_accession}}</a>. Click through for much more information on this protein.</p>
+	<h2>Function</h2>
+	<p>{{object.function}}</p>
+
+	<h2>Sequence</h2>
+	<p>The following sequence was used for predicting which <i>in silico</i>-translated transcripts from the retrotransposon family, {{object.superfamily.name}}, are {{object.name}} sequences: </p>
+	<p class= "wrapped nokern">{{object.base_sequence}}</p>
+
+{% endblock content %}

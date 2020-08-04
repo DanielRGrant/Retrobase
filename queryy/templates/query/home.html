@@ -1,0 +1,28 @@
+{%extends "query/base.html" %}
+{% block content %}
+	<h1>Retrobase Home Page</h1>
+	<div class="text-section">
+		<h2>About</h2>
+		<p>Retrobase is a database of retrotransposon DNA sequences acquired from UCSC Table Browser and proteins translated <i>in silico</i> from these sequences. All protein name labels are predicted using psi-BLAST. More information on prediction method <a href="#">available here</a>. This resource is not currently intended to provide deep and detailed data of retroviral proteins. Links are provided to Uniprot and NCBI pages that serve that purpose. Instead, it serves to make accessible and queryable the many variants of retrotransposon DNA and protein sequences. </p>
+	</div>
+
+	<div class="text-section">	
+		<h2>Data Available</h2>
+		<p>The database is a prototype and presently contains data on the following retrotransposon families:</p>
+		<ul>
+			{% for sf in superfams %}
+			<li><a href="{% url 'query-proteinsuperfamilyinfo' sf.id %}">{{sf.name}}</a></li>
+			{% endfor %}
+		</ul>
+		<p>For each retrotransposon protein described in the evolutionary trees are presented mapping relationships between retrotransposon subfamilies.</p>
+	</div>
+	<div class="text-section">
+		<h2>Query Tool</h2>
+		<p>Querying Retrobase allows exact matching of query sequences (whole or partial) to sequences in the database. Currently BLAST algorithms are not available.</p>
+	</div>
+	<div class="text-section">
+		<h2>Tissue Expression Atlas</h2>
+		<p>The Tissue Expression Atlas is tool for community sourcing data on the tissue specificity of expression of retrotransposon protein sequence variants.</p>
+	</div>
+
+{% endblock content %}

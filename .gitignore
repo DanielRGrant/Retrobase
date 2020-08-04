@@ -2,3 +2,4 @@ myvenv
 retrobase_proj.sublime-project
 retrobase_proj.sublime-workspace
 /upload_data
+db.sqlite3

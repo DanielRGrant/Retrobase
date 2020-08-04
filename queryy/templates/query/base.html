@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Update tip taken from https://stackoverflow.com/questions/52682812/django-css-not-updating -->
+	<link rel="stylesheet" href="/static/query/style2.css?{% now "U" %}"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+
+    {% if title %}
+    	<title> Blog: {{title}} </title>
+    {%else%}
+    	<title> Blog </title>
+    {%endif%}
+
+    
+</head>
+<body>
+
+<nav>
+    <a class="menu-button RetrobaseLogo" href="{% url 'query-home' %}" class="menu-button"> Retrobase</a>
+    <a href="{% url 'query-query' %}" class="menu-button"> Query</a>
+    <a href="#" class="menu-button"> Evolutionary Trees</a>
+    <a href="{% url 'expressionatlas-home' %}" class="menu-button">Tissue Expression Atlas</a>
+</nav>
+
+<section>
+	<div class="box">
+		{% block content %}{% endblock %}	    	
+	</div>
+</section>
+</body>
+</html>

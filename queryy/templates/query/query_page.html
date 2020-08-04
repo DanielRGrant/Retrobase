@@ -1,0 +1,18 @@
+{%extends "query/base.html" %}
+{% block content %}
+	<div class= "smallertext">
+		<h1>Query sequences against the Retrobase database</h1>
+		<form action="" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<table>
+				{{ form.as_table }}
+			</table>
+			<input type="submit" value="Submit">
+
+		</form>
+	</div>
+	<div>
+		<h2>About Query</h2>
+		<p>The Retrobase Query tool performs exact matching of query sequences to sequences in the database. Currently BLAST algorithms are not available.</p>
+	</div>
+{% endblock content %}

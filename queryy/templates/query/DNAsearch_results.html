@@ -1,0 +1,42 @@
+{%extends "query/base.html" %}
+{% block content %}
+	<h1>Search Results</h1>
+
+	{% if dnarec %}
+	<table class="querytable">
+		<tr>
+			<th scope=column>ID</th>
+			<th scope=column>Genomic Coordinates</th>
+			<th scope=column>Predicted Proteins (Sequence IDs)</th>			
+		</tr>
+
+	  {% for hit in dnarec %}
+		  {% for hitrec in hit.dnarecord_set.all %}
+		    <tr>
+			    <th> <a href="{% url 'query-dnarecinfo' hitrec.id%}"> {{ hitrec.id }} </a> </th>
+			   	<td> {{ hitrec.coords }} </td>
+			   	<td>{% for protname, dic in hitrec.GetProteinNamesIDs.items %}
+			   			<a href="{% url 'query-proteinnameinfo' dic.pnid %}">{{protname}}</a> (
+			   			{% for psid in dic.psids %}
+				   			<a href="{% url 'query-proteinseqinfo' psid %}">{{psid}}</a>{{ forloop.last|yesno:",&#44;"|safe }} 
+				   		{% endfor %}
+				   		){{forloop.last|yesno:",&#44;"|safe }}  
+			   		{%endfor%}
+			   		
+
+			   	</td>
+			</tr>
+		  {% endfor %}
+	  {% endfor %}
+
+
+	{% else %}
+		<p> No matches found </p>
+	{% endif %}
+	</table>
+	<div class="border-top pt-3">
+	<small class="text-muted">
+		<a href="{% url 'query-query' %}">Search Again</a>
+	</small>
+	</div>
+{% endblock content %}

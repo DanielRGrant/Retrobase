@@ -1,0 +1,35 @@
+{%extends "query/base.html" %}
+{% block content %}
+	<h1>Search Results</h1>
+
+	{% if proteins %}
+	<table class="querytable">
+		<tr>
+			<th scope=column>ID</th>
+			<th scope=column>Family</th>
+			<th scope=column>Protein (predicted)</th>
+			<th scope=column>DNA Record ID</th>
+			<th scope=column>DNA Record Coordinates</th>
+		</tr>
+	  {% for hit in proteins %}
+	    <tr>
+		    <th>  {{ hit.id }} </th>
+		   	<td> <a href="{% url 'query-proteinfamilyinfo' hit.dnarecord.family.id %}">{{ hit.dnarecord.family.name }} </td>
+		    <td> <a href="{% url 'query-proteinnameinfo' hit.proteinname.id %}">{{ hit.proteinname.name }} </a> </td>
+		    <td> <a href="{% url 'query-dnarecinfo' hit.dnarecord.id %}">{{ hit.dnarecord.id}} </a> </td>
+		    <td> {{ hit.dnarecord.coords}} </td>
+		</tr>
+	  {% endfor %}
+
+	{% else %}
+		<p> No matches found </p>
+	{% endif %}
+	</table>
+	<div class="border-top pt-3">
+	<small class="text-muted">
+		<a href="{% url 'query-query' %}">Search Again</a>
+	</small>
+	</div>
+
+
+{% endblock content %}

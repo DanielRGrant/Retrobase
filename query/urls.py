@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from .views import *
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
 	path('', views.home, name="query-home"), 
@@ -13,3 +14,5 @@ urlpatterns = [
 	path('protseqinfo/<pk>/', ProteinSeqDetailView.as_view(), name="query-proteinseqinfo"),
 	path('BLASTDNAsearch/', views.BLASTDNAsearch, name="query-BLASTdnasearch"),  
 ]
+
+urlpatterns+= staticfiles_urlpatterns()

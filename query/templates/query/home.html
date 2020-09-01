@@ -1,9 +1,10 @@
 {%extends "query/base.html" %}
+{% load static %}
 {% block content %}
 	<h1>Retrobase Home Page</h1>
 	<div class="text-section">
 		<h2>About</h2>
-		<p>Retrobase is a database of retrotransposon DNA sequences acquired from UCSC Table Browser and proteins translated <i>in silico</i> from these sequences. All protein name labels are predicted using psi-BLAST. More information on prediction method <a href="#">available here</a>. This resource is not currently intended to provide deep and detailed data of retroviral proteins. Links are provided to Uniprot and NCBI pages that serve that purpose. Instead, it serves to make accessible and queryable the many variants of retrotransposon DNA and protein sequences. </p>
+		<p>Retrobase is a database of retrotransposon DNA sequences acquired from UCSC Table Browser and proteins translated <i>in silico</i> from these sequences. All protein name labels are predicted using psi-BLAST. More information on acquiring data <a href='{% static "query/Acquiring_data.pdf" %}'>available here</a>. This resource is not currently intended to provide deep and detailed data of retroviral proteins. Links are provided to Uniprot and NCBI pages that serve that purpose. Instead, it serves to make accessible and queryable the many variants of retrotransposon DNA and protein sequences. </p>
 	</div>
 
 	<div class="text-section">	
@@ -17,11 +18,17 @@
 		<p>For each retrotransposon protein described in the evolutionary trees are presented mapping relationships between retrotransposon subfamilies.</p>
 	</div>
 	<div class="text-section">
-		<h2>Query Tool</h2>
+		<h2><a class="UnderLineHover" href='{% url "query-query" %}'> Query Tool</a></h2>
 		<p>Querying Retrobase allows exact matching of query sequences (whole or partial) to sequences in the database. Currently BLAST algorithms are not available.</p>
 	</div>
 	<div class="text-section">
-		<h2>Tissue Expression Atlas</h2>
+		<h2><a class="UnderLineHover" href='#'>Evolutionary Trees</a></h2>
+		<p>Tool currently unavailable.</p>
+		<p>Evolutionary Trees is a tool for viewing the evolutionary relationships between families of retrotransposons of a given class/superfamily.</p>
+	</div>
+	<div class="text-section">
+		<h2><a class="UnderLineHover" href='#'>Tissue Expression Atlas</a></h2>
+		<p>Tool currently unavailable</p>
 		<p>The Tissue Expression Atlas is tool for community sourcing data on the tissue specificity of expression of retrotransposon protein sequence variants.</p>
 	</div>
 

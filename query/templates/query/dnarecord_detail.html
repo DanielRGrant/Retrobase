@@ -12,8 +12,8 @@
 			</tr>
 				<th scope="row">Proteins Seqs Predicted:</th>
 				<td>{% for protname, dic in object.GetProteinNamesIDs.items %}
-			   			<a href="{% url 'query-proteinnameinfo' dic.pnid %}">{{protname}}</a> (
-			   			{% for psid in dic.psids %}
+			   			<a href="{% url 'query-proteinnameinfo' dic.protnameid %}">{{protname}}</a> (
+			   			{% for psid in dic.protseqid %}
 				   			<a href="{% url 'query-proteinseqinfo' psid %}">{{psid}}</a>{{ forloop.last|yesno:",&#44;"|safe }} 
 				   		{% endfor %}
 				   		){{forloop.last|yesno:",&#44;"|safe }}  
@@ -25,6 +25,7 @@
 
 		<h2>Predicted Protein Sequences:</h2>
 		{% for protein in object.proteinseq.all %}
+			<div class= "SearchResult">
 				<table class= "infotable proteinseqtable">
 					<tr>
 						<th scope="row">Protein ID: </th>
@@ -36,6 +37,7 @@
 					</tr>
 				</table>
 				<p class= "wrapped nokern">{{protein.seq}}</p>
+			</div>
 			{% empty %}
 				<p>No protein sequences predicted</p>
 		{% endfor %}

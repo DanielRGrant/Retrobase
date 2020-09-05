@@ -79,8 +79,6 @@ def Query(request):
 			model = form.cleaned_data['model']
 			query = form.cleaned_data['seq']
 
-			
-
 
 
 			if (model == "protseq"):
@@ -105,7 +103,7 @@ def Query(request):
 			}
 			return render(request, 'query/query_page.html', context)
 
-    # If this is a GET (or any other method) create the default form.
+    # If this is a POST request create the default form.
 	else:
 		form = SequenceQueryForm()
 
@@ -114,3 +112,27 @@ def Query(request):
 		}
 
 		return render(request, 'query/query_page.html', context)
+
+
+def MainSearchBar(request):
+    
+    # If this is a POST request then process the Form data
+	if request.method == 'POST':
+		try:
+			search_input=request.POST.get("search_input")
+
+			protein_names = ProteinName.objects.filter(name__contains=search_input)
+			family = Family.objects.filter(name__contains=search_input)
+			superfamily = Superfamily.objects.filter(name__contains=search_input)
+
+			context= {
+				"protein_names": protein_names, 
+				"family" : family, 
+				"superfamily": superfamily,
+				"search_input": search_input
+			}
+
+			return render(request, 'query/mainsearchbarresults.html', context)
+		except Exception as e:
+			context = {"error": e}
+			return render(request, 'query/mainsearchbarresults.html', context)

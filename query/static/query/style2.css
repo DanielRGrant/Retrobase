@@ -15,7 +15,7 @@ nav {
   top:0;
   left:0;
   width: 100%;
-  background: blue;
+  background: #2e70b3;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   height: 8rem;
@@ -49,13 +49,13 @@ section {
 h1 {
   font-size: 3.2rem;
   padding: 2rem 0 0.3rem 1rem;
-  border-bottom: solid blue 3px;
+  border-bottom: solid #2e70b3 3px;
 }
 
 h2 {
   font-size: 2rem;
   padding: 2rem 0 0.5rem 1.6rem;
-  border-bottom: dashed blue 1px;  
+  border-bottom: dashed #2e70b3 1px;  
   margin-bottom: 0.8rem;
 }
 
@@ -84,6 +84,7 @@ h2 {
 }
 
 
+
 .gridlist {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -109,6 +110,16 @@ th, td {
 }
 
 
+.five {
+  width: 5%;
+}
+.ten {
+  width: 10%;
+}
+
+.twenty {
+  width: 20%;
+}
 
 .querytable th, .querytable td {
   border-left: solid black 1px;
@@ -119,6 +130,7 @@ th, td {
   background-color: #e3edfc;
 }
 
+
 .infotable {
   text-align: left;
 }
@@ -127,10 +139,59 @@ th, td {
   font-size: 1rem;
 }
 
+.SearchResult {
+  border-bottom: dashed black 0.1rem;
+  margin-bottom: 3rem;
+  border-color:#2e70b3;
+}
+
+.rem2marginbottom {
+  margin-bottom: 2rem;
+}
+
+
+
+
+/* Alignment */
+table {
+  border-collapse:collapse;
+  border-height: 0px;
+  padding:0px;
+
+}
+
+.sequenceid {
+  text-align: right;
+}
+
+.alignsequence, .sequenceid {
+  padding:0px 10px 2px 0;
+}
+
+.alignsequence {
+  overflow-wrap: break-word;
+  font-family: monospace;
+  font-kerning: none;
+  letter-spacing: 2px;
+
+
+
+
 /* links */
-a:visited.querytable  {
+a:visited.querytable {
   color: blue;
   text-decoration: none
+}
+
+a:link.UnderLineHover, a:visited.UnderLineHover, a:hover.UnderLineHover{
+  color: black;
+  text-decoration: none  
+}
+
+a:hover.UnderLineHover {
+  text-decoration: underline
+
+
 }
 
 .errorlist {

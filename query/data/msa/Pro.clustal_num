@@ -1,0 +1,86 @@
+CLUSTAL O(1.2.4) multiple sequence alignment
+
+
+ERV-b2bf7-910      ------------------------------------------------------------	0
+ERV-b2bf7-425      RKEPDFGKRHEGPVPGPILNWGISSSG--------------------HSLIPVHCLSPAT	40
+ERV-b2bf7-95f      ------------------------------------------------------------	0
+ERV-b2bf7-ba       ------------------------------------------------------------	0
+ERV-b2bf7-4a5      ------------------------------------------------------------	0
+ERV-b2bf7-4c9      ------------------------------------------------------------	0
+ERV-b2bf7-33f      ------------------------------------------------------------	0
+ERV-b2bf7-396      ------------------------------------------------------------	0
+ERV-b2bf7-351      ------------------------------------------------------------	0
+ERV-b2bf7-376      ------------------------------------------------------------	0
+Pro                ------------------------------------------------------------	0
+ERV-b2bf7-62       KWATIVGKLAKGPASGPATNWGIPNSALCSSGFSGTTTPTVPSTSGNKPVTTVQQLSPAT	60
+                                                                               
+
+ERV-b2bf7-910      -----------------------LSPWGITGPLPQGSVGLVLGRASTSAKGIIIHTGLIN	37
+ERV-b2bf7-425      AGSAAVDLCCTKAVSLLPGEPSQKVPTGVRGPLPVGTIGLLLGRSSLGLKGVQIHTGVID	100
+ERV-b2bf7-95f      ------------------------------------------------------------	0
+ERV-b2bf7-ba       ------------------------------------------------------------	0
+ERV-b2bf7-4a5      ------------------------------------------------------------	0
+ERV-b2bf7-4c9      ------------------------------------------------------------	0
+ERV-b2bf7-33f      ------------------------------------------------------------	0
+ERV-b2bf7-396      ---------------------------------------------SLNLKGVQIHTGVID	15
+ERV-b2bf7-351      ---------------------------------------------SLNLKGVQIHTGVID	15
+ERV-b2bf7-376      ---------------------------------------------SLNLKGVQIHTGVID	15
+Pro                ------------------------------------------------------------	0
+ERV-b2bf7-62       SGSAAVDLCTIQAVSLLPGEPPQKIPTGVYGPLPEETVGLILGRSRLNLKGVQIHTGVVD	120
+                                                                               
+
+ERV-b2bf7-910      SDSLDEIKLIMSTKVPVSILAGESIAQFLLLLNIFLNKGD--KTHGPGMGSGGEKAAYWI	95
+ERV-b2bf7-425      SDYTGEIQIVISTSVPWKAEPGEHIAQLLIVSYVGMGKSEIKQIGGFGSRNKQGKAAYSV	160
+ERV-b2bf7-95f      -------------------------------------------TGGFGSTNKQGKAAYWV	17
+ERV-b2bf7-ba       -------------------------------------------TGGFGSTNKQDKVAYWV	17
+ERV-b2bf7-4a5      -------------------------------------------TGGFGSTNKQGKAAYWV	17
+ERV-b2bf7-4c9      -------------------------------------------TGGFGSTNKQGKVAYWV	17
+ERV-b2bf7-33f      -----------------------------------NWENKTERTRGFGSTNSARKATQWA	25
+ERV-b2bf7-396      SDYKGEIQLVISSTVPWSANPGNRIAQLLLLPYIKIGENKTERTGGLGSTNSAGKATHWA	75
+ERV-b2bf7-351      SDYKGEIQLVISSTVPWSANPGNRIAQLLLLPYIKIGENKTERTGGFGSTNSAGKATHWA	75
+ERV-b2bf7-376      SDYKGEIQLVISSTVPWSANPGNRIAQLLLLPYIKIGENKTERTGGFGSTNSAGKATHWA	75
+Pro                ----------------------------------------------------------WA	2
+ERV-b2bf7-62       SDYKGEIQLVISSSIPWSASPGDRIARLLLLPYIKVGNSEIKRTGGFGSTDPTGKAAYWA	180
+                                                                               
+
+ERV-b2bf7-910      NVISKQWPTCTIHIQGKKFEGLVDTGADVSIISSNLWPSSWLKHPTNID-----------	144
+ERV-b2bf7-425      NQITDKHPTYEITIQGKKFKGLVDTGVDSSIISLQHWPSTWPIQPAQLNIVGVGKAPEVY	220
+ERV-b2bf7-95f      NQITDKCPTCEITIQGKKFKGLVDTGADISLISLQHWPSTWPVQPAQFNIVGVGKASEVY	77
+ERV-b2bf7-ba       NQITDKRPTCEITIQGKNFKGLVDTGADISIISLQQWPSAWPIQPTQFNIVGVGKAPEVY	77
+ERV-b2bf7-4a5      NQITDKRPTCEITIQGQKFKGLVDTGADISIISLQHWPSAWPIQPTQFNIVGVGKAPEVY	77
+ERV-b2bf7-4c9      NQITDKRPTCEITIQGKKFKGLVDTGVDISIISLQHWPSAWPIQPTQFNIVGVGKVPEVY	77
+ERV-b2bf7-33f      RHVSENRPVCTVTIQGKQFIGLLDTDADVSLIALNQWPKNWPKQKPVTGLVGVGSASKVY	85
+ERV-b2bf7-396      RQVSENRSVCTVTIQGKQFIGLVDTDADVSIIALNQWPKNWPKQKPVTGLVGVGSASKVY	135
+ERV-b2bf7-351      RQVSENRPVCTVTIQGKQFIGLLDTDADVSIIALNQWPKNWPKQKPVTGLVGVGSASKVY	135
+ERV-b2bf7-376      RQVSENRPVCTVTIQGKQFIGLVDTDADVSIIALNQWPKNWPKQKPVTGLVGVGSASKVY	135
+Pro                SQVSENRPVCKAIIQGKQFEGLVDTGADVSIIALNQWPKNWPKQKAVTGLVGIGTASEVY	62
+ERV-b2bf7-62       SQVSENRPVCKAVIQGKQLEGLVDTGADVSIIALNQWPKNWPKQKTVTGLVGIVTASEVY	240
+                     ::.:  .    ***::: **:**..* *:*: : **. *  :    .           
+
+ERV-b2bf7-910      ------------------------------------------------------------	144
+ERV-b2bf7-425      QSSYILHCEGPDGQPGTIQPIITSVPINLWGRDLLQ------------------------	256
+ERV-b2bf7-95f      QSSYILHCEGPDGQSGTIQPIITSVPINLWGRDLLQQCQHKF------------------	119
+ERV-b2bf7-ba       QSSYILHCEGPNGQPGTIQPIITSVPINLWGRDLLQQWGAQVLIPEQLYSPQSRHIIHEM	137
+ERV-b2bf7-4a5      QSSYILHCEGPDGQPGTIPPIITSVSVNL-------------------------------	106
+ERV-b2bf7-4c9      QSSYILHCEGPDGQHGTIQPIITSVPINLWGRDLLQQWGAKVLIPEQLYSPQSQHIMHEM	137
+ERV-b2bf7-33f      QSTMILHCLGPDNQESTVQPMITFIPNNFLGRDLLQQ-----------------------	122
+ERV-b2bf7-396      QSTMILHCLGPDNQESTVQPMITAIPINLWGRDLLQQWHAEMTIPASLYSPTSQKIMTKM	195
+ERV-b2bf7-351      QSTMILHCLGPDNQESTVQPMITAIPINLWGRDLLQQWHAEMTIPASLYSPTSQKIRLKW	195
+ERV-b2bf7-376      QSTMILHCLGPDKQESTVQPMITFIPINLWGRDLLQQWHAEMTIPASLYSPTSQKIRLKW	195
+Pro                QSTEILHCLGPDNQESTVQPMITSIPLNLWGRDLLQQWGAEITMPAPSYSPTSQKIMTKM	122
+ERV-b2bf7-62       QSTEILHCLGPHNQESTVQPMITSIPLNLWGRDLLQQWGAEITMTATLYSPMSQKIMTKM	300
+                                                                               
+
+ERV-b2bf7-910      ---------------------------------------	144
+ERV-b2bf7-425      ---------------------------------------	256
+ERV-b2bf7-95f      ---------------------------------------	119
+ERV-b2bf7-ba       GHVPGMGLGKYLQGLKELLQVERQSSCQRLGYHF-----	171
+ERV-b2bf7-4a5      ---------------------------------------	106
+ERV-b2bf7-4c9      WYVPGMGLEKNLQDLKEPLQTERQSSCQRLRYHF-----	171
+ERV-b2bf7-33f      ---------------------------------------	122
+ERV-b2bf7-396      GYLPGKGLGKNGDGIKIPIEAEGNQERKGIGYPFQEWPL	234
+ERV-b2bf7-351      GISLAKD--------------------------------	202
+ERV-b2bf7-376      GISLAKD--------------------------------	202
+Pro                GYIPGKGLGKNEDGIKIPVEAKINQEREGIGNPC-----	156
+ERV-b2bf7-62       GYIPGKGLGKNEDGIKVPIEAKINHGREGTGYPF-----	334
+                                                          

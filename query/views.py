@@ -4,6 +4,9 @@ from .models import *
 from django.views.generic import ListView, DetailView
 from query.forms import SequenceQueryForm
 from django.core.exceptions import ValidationError
+from Bio import AlignIO
+import os
+
 
 
 def home(request):
@@ -62,6 +65,63 @@ class ProteinFamilyDetailView(DetailView):
 
 class ProteinSeqDetailView(DetailView):
 	model= ProteinSeq
+
+
+
+	#Get multiple sequence alignment
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+
+		protein_name_instances = context["object"].proteinname_set.all()
+
+		alignments=[]
+		for protein_name_instance in protein_name_instances:
+			
+			#Get protein and superfamily names
+			protein_name = protein_name_instance.name
+			superfamily = protein_name_instance.superfamily.name
+
+			
+			#get msa file
+			alignment_filename = protein_name + ".clustal_num"
+
+			module_dir = os.path.dirname(__file__)  # get current directory
+			file_path = os.path.join(module_dir, "data", "msa", alignment_filename)
+
+			msa_file = open(file_path, "r")
+
+			#Get alignment length
+			align = AlignIO.read (file_path, 'clustal')
+			align_len = len(align)
+
+			#extract alignment data
+			records=[]
+			count= 0
+			for line in msa_file:
+
+				if line.startswith(superfamily) or line.startswith(protein_name):
+					count+=1
+
+					entry={}
+					line = line.split()
+					entry["id"] = line[0]
+					entry["seq"] = line[1]
+					records.append(entry)
+
+					if count % align_len ==0:
+						entry={}
+						entry["id"] = "|"
+						entry["seq"] = " "
+						records.append(entry)
+
+			records= records[:-1]
+
+			alignment = {"protein_name": protein_name, "records": records, "align_len": align_len}
+			alignments.append(alignment)
+		context['alignments'] = alignments
+		return context
+
+
 
 
 

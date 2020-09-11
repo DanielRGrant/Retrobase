@@ -1,0 +1,68 @@
+CLUSTAL O(1.2.4) multiple sequence alignment
+
+
+ERV-b2bf7-358      ------------------------------------------------------------	0
+ERV-b2bf7-37d      ------------------------------------------------------------	0
+ERV-b2bf7-391      ------------------------------------------------------------	0
+ERV-b2bf7-4a3      ------------------------------------------------------------	0
+ERV-b2bf7-962      ------------------------------------------------------------	0
+Rec                ------------------------------------------------------------	0
+ERV-b2bf7-353      ------------------------------------------------------------	0
+ERV-b2bf7-378      ------------------------------------------------------------	0
+ERV-b2bf7-38e      QITHITGIPYNSQGQAIIERTNRTLKAELVKQKKEKDIKEYNTPQMQLNLALYTLNFLNI	60
+                                                                               
+
+ERV-b2bf7-358      ------------------------------------------------------------	0
+ERV-b2bf7-37d      ------------------------------------------------------------	0
+ERV-b2bf7-391      ------------------------------------------------------------	0
+ERV-b2bf7-4a3      ------------------------------------------------------------	0
+ERV-b2bf7-962      ------------------------------------------------------------	0
+Rec                --------------------------------------------------MNPSEM----	6
+ERV-b2bf7-353      -----------------------------------------------SSTMNPSEM----	9
+ERV-b2bf7-378      -----------------------------------------------SSTMNPSEM----	9
+ERV-b2bf7-38e      YRNQTTTSAEQHFTGKKNSPHEGKLIWWKDNKNKTREIGKMITWGRGFACVSPGENQLPV	120
+                                                                               
+
+ERV-b2bf7-358      ------------------------------------------------------------	0
+ERV-b2bf7-37d      ------------------------------------------------------------	0
+ERV-b2bf7-391      ------------------------------------------------------------	0
+ERV-b2bf7-4a3      -----NLVMS----QMLRKRFQEDPKDPLVAAMSRLTLRRTPTVMSNIRGTQPPTWRQIK	51
+ERV-b2bf7-962      -----NLIMS----QMPRKRLLEDPEDPSVAAMLRLTLRRTPTLMSNTCQTQPPTWGQIK	51
+Rec                ------------QRKAPPRRRRHRNRAPLTHKMNKMVTSEEQMKLPSTKKAEPPTWAQLK	54
+ERV-b2bf7-353      ------------QREAPPRRWKTRNRASSTHRVNKMVISEEQMKLPSTKKVGPLTWAQLK	57
+ERV-b2bf7-378      ------------QREAPPRRWKTRNRASSTHRVNKMVISEEQMKLPSTKKVGPLTWAQLK	57
+ERV-b2bf7-38e      WIPTRHLKFYNEPIGDAKRSATTEMVASSTHRVNKMVTSEEQMKLPSTKEVGPLTWAQLK	180
+                                                                               
+
+ERV-b2bf7-358      ----------RTKRVTQTPENMLPAALMIVST---VVSLPVTAGAATTNHTYRDCVPFPP	47
+ERV-b2bf7-37d      ----------RTKRVTQTPENMLPAALMIVST---VVSLPVTAGAATTNHTYRDCVPFPP	47
+ERV-b2bf7-391      ----------RTKRVTQTPENMLPAALMIVST---VVSLPMTAVAATTNHTYWACVPFPP	47
+ERV-b2bf7-4a3      KLLQMAEENLRKVGQPVAMSNLMIA---VIAVITIAMSIPLASAHTKNNYTYWAY--L--	104
+ERV-b2bf7-962      KLSQMAEENLRKAGQPVTMSNLMVT---IIAVITTAMSIPSIRADTENNYTY--------	100
+Rec                KLTQLATKYLENTKVTQTPESMLLAALMIVSMVSAGV--PNSSEE---------T--A--	99
+ERV-b2bf7-353      KLTQLAEKSLKNKKGNTNSREHAAC--SFDDCINGGKS-PCDCRS---------------	99
+ERV-b2bf7-378      KLTQLAEKSLKNKKGNTNSREHAAC--SFDDCINGGKS-PCDCRS---------------	99
+ERV-b2bf7-38e      KLTQLAEKSLKNKKGNTNSREHAAC--SFDDCINGGKS-PYDCSS---------------	222
+                             ..        .       .          *                    
+
+ERV-b2bf7-358      LIQAVTWMDNPIEVYVNNSAWVPGLTDDRCPAQPKKELMINISTGYHYPPICQGKVPGYL	107
+ERV-b2bf7-37d      LIQAVTWMDNPIEVYVNNSAWVPGLTDDRCPAQPKKELMINISTGYHYPPICQGKVPGYL	107
+ERV-b2bf7-391      LIQAVTWMDNPIEVYVNNSAWVPGLTDDHCPAQPKKELMINISTGYHYPPICLGKVPGYL	107
+ERV-b2bf7-4a3      ------------SILAGNNAWMQSLYDTVTHASRSQ-----------YLP----------	131
+ERV-b2bf7-962      ------------------------------------------------------------	100
+Rec                ------------TIENGP------------------------------------------	105
+ERV-b2bf7-353      -------------SHN--------------------------------------------	102
+ERV-b2bf7-378      -------------SHN--------------------------------------------	102
+ERV-b2bf7-38e      -------------SHN--------------------------------------------	225
+                                                                               
+
+ERV-b2bf7-358      MPTTPNWLVEVPTVSATSRFTYHIVSGMSLGPQIK	142
+ERV-b2bf7-37d      MPTTPNWLVEVPTVSATSRFTYHIVSGMSLGPQIK	142
+ERV-b2bf7-391      MPTTPNWLVEVPTVSATSRFTYHIVSGMSLGPQIK	142
+ERV-b2bf7-4a3      -----------------------------------	131
+ERV-b2bf7-962      -----------------------------------	100
+Rec                -----------------------------------	105
+ERV-b2bf7-353      -----------------------------------	102
+ERV-b2bf7-378      -----------------------------------	102
+ERV-b2bf7-38e      -----------------------------------	225
+                                                      

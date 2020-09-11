@@ -1,23 +1,57 @@
 {%extends "query/base.html" %}
 {% block content %}
-	<h1>Protein Record #{{ object.id }}</h1>
+	<h1 class="msaIdCatcher">Protein Record #{{ object.id }}</h1>
 	<table class= "infotable">
 		<tr>
 			<th scope="row">Proteins Predicted:</th>
-			<td>{{object.proteinname.name}}</td>
+			<td><span class= "RemoveComma">{% for protname in object.proteinname_set.all %}<a href="{% url 'query-proteinnameinfo' protname.id %}">{{protname.name}}</a>, {% endfor %}</span></td>
 		</tr>			
 		<tr>
-			<th scope="row">Retrotransposon Family: </th>
+			<th scope="row">Retrotransposon Superfamily: </th>
 			<td>{{ object.dnarecord.family.superfamily.name}}</td>
 		</tr>
 		<tr>
-			<th scope="row">Subfamily:</th>
+			<th scope="row">Family:</th>
 			<td>{{object.dnarecord.family.name}}</td>
 		</tr>
 	</table>
-	<h2> Function </h2>
-	<p>The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... The function of this protein is to partyyyy... </p>
-
 	<h2>Sequence</h2>
 	<p class="wrapped nokern">{{object.seq}}</p>
+
+
+	{% for protname in object.proteinname_set.all %}
+	 <h2><a href="{% url 'query-proteinnameinfo' protname.id %}">{{protname.name}}</a></h2>
+	<h3> Function </h3>
+		<p><i>Information taken from Uniprot</i> <a href= "{{protname.uniprot_link}}">({{protname.uniprot_accession}})</a></p>
+		<p>{{protname.function}}</p>
+
+		<h3>Reference Sequence</h3>
+			<p class="wrapped nokern">{{protname.base_sequence}}</p>
+	{% endfor %}
+
+
+	<h2>Multiple Sequence Alignment</h2>
+
+		{% for MSA in alignments %}
+
+
+			<h3 class= "msaProtNameCatcher">{{MSA.protein_name}}</h3>
+				<p>The following is a multiple sequence alignment (MSA) of all sequences predicted to be {{MSA.protein_name}} sequences.</p>
+
+			<table class="rem2marginbottom">
+				{% for line in MSA.records %}
+					<tr class=sequenceidrow>
+						<th class=sequenceid>{{line.id}}</th>
+						<td class="alignsequence">{{line.seq}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+
+			{% if not forloop.last %}
+				<div class="SearchResult"></div>
+			{% endif %}
+			
+		{% endfor %}
+
+
 {% endblock content %}

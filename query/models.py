@@ -24,25 +24,46 @@ class DNARecord(models.Model):
 	family = models.ForeignKey(Family, on_delete = models.CASCADE)
 	genome = models.ForeignKey(Genome, on_delete = models.CASCADE)
 
+	def __str__(self):
+		return str(self.id)
+
 	def GetProteinNamesIDs(self):
-		proseq = self.proteinseq.all()
+		protseqs = self.proteinseq.all()
 
 		dic= {}
-		for ps in proseq:
-			pn = ps.proteinname.name
-			psid = ps.id
-			pnid = ps.proteinname.id
+		if len(protseqs) > 0: 
+			for protseq in protseqs:
+				protnames_instances = protseq.proteinname_set.all()
+				protseqid = protseq.id
 
-			if pn in list( dic.keys() ):
-				dic[pn]["psids"].append(psid)
-			else:
-				dic[pn] = {"psids":[psid], "pnid": pnid}
+				for protname_instance in protnames_instances:
+					protname=protname_instance.name
+					protnameid=protname_instance.id
+
+					if protname in list( dic.keys() ): #if protname already added
+						dic[protname]["protseqid"].append(protseqid)
+
+					else:
+						dic[protname] = {
+							"protseqid":[protseqid],
+							"protnameid": protnameid
+						}
 
 		return dic
 
+
+
+class ProteinSeq(models.Model):
+	id= models.CharField(max_length = 40, primary_key=True, unique=True)
+	seq = models.TextField()
+	length= models.IntegerField()
+	dnarecord = models.ForeignKey(DNARecord, on_delete = models.CASCADE, related_name="proteinseq")
+
+	def __str__(self):
+		return str(self.id)
+
 class ProteinName(models.Model):
 	name = models.CharField(max_length=20)
-	combined= models.BooleanField()
 	superfamily = models.ForeignKey(Superfamily, on_delete=models.PROTECT)
 	last_checked_uniprot = models.DateField(blank=True, null=True)
 	uniprot_new_seq = models.TextField(blank=True, null=True)
@@ -52,18 +73,8 @@ class ProteinName(models.Model):
 	uniprot_link = models.URLField(max_length=200, blank=True, null=True)
 	base_sequence = models.TextField(blank=True, null=True)
 	function = models.TextField(blank=True, null=True)
+	proteinseq = models.ManyToManyField(ProteinSeq, blank=True, null=True)
 
-	def UpdateBaseSequence (self):
-		if self.uniprot_new_seq:
-			self.base_sequence = self.uniprot_new_seq
-			self.uniprot_new_seq = None
-			self.save()
-		else:
-			raise Exception("No new sequence available in database.")
+	def __str__(self):
+		return self.name
 
-
-class ProteinSeq(models.Model):
-	seq = models.TextField()
-	proteinname = models.ForeignKey(ProteinName, on_delete = models.CASCADE)
-	length= models.IntegerField()
-	dnarecord = models.ForeignKey(DNARecord, on_delete = models.CASCADE, related_name="proteinseq")

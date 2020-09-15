@@ -7,15 +7,24 @@ in python and created a BLAST database from these amino acid sequences, then I r
 sequences obtained from uniprot.
 
 
+
 Detailed instructions on acquiring the data are availabile: /assets/Acquiring_data.pdf
 
+Instructions are included on how to upload a small example dataset.
 
 
-To explore, simply clone the repository, navigate to directory containing manage.py and run:
+
+To run the application locally, clone the repository, navigate to the directory containing manage.py and run:
+
+
+  python manage.py makemigrations
+
+  python manage.py migrate
+
+Then, once you have uploaded some data, following the instructions at /assets/Acquiring_data.pdf, run:
 
   python manage.py runserver
- 
-Then follow the instructions on populating the database in /assets/Acquiring_data.pdf
-A small JSON file is provided with the code to upload the contained data.
+
+and navigate to http://localhost:8000/ in your browser.
 
   

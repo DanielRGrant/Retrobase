@@ -10,14 +10,7 @@
 	  </div>
 	  {%endfor%}
 	{% endif %}
-	{% if family %}
-	  {%for fam in family%}
-	  <div class="SearchResult">
-	    <h3><a href="{% url 'query-proteinfamilyinfo' fam.id %}" >{{fam.name}}</a></h3>
-	    <p>{{fam.name}} is a family of the {{fam.superfamily.name}} superfamily/class of retrotransposons.</p>
-	  </div>
-	  {%endfor%}
-	{% endif %}
+
 	{% if superfamily %}
 	  {%for supfam in superfamily%}
 	  <div class="SearchResult">
@@ -26,6 +19,16 @@
 	  </div>
 	  {%endfor%}
 	{% endif %}	
+
+	{% if family %}
+	  {%for fam in family%}
+	  <div class="SearchResult">
+	    <h3><a href="{% url 'query-proteinfamilyinfo' fam.id %}" >{{fam.name}}</a></h3>
+	    <p>{{fam.name}} is a family of the {{fam.superfamily.name}} superfamily/class of retrotransposons.</p>
+	  </div>
+	  {%endfor%}
+	{% endif %}
+
 
 
 

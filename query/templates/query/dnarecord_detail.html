@@ -6,39 +6,24 @@
 				<th scope="row">Retrotransposon Family: </th>
 				<td>{{ object.family.superfamily.name}}</td>
 			</tr>
-				<th scope="row">Subfamily:</th>
+				<th scope="row">Family:</th>
 				<td>{{object.family.name}}</td>
 			</tr>
 			</tr>
-				<th scope="row">Proteins Seqs Predicted:</th>
+				<th scope="row">Proteins Sequences Predicted:</th>
 				<td>{% for protname, dic in object.GetProteinNamesIDs.items %}
 			   			<a href="{% url 'query-proteinnameinfo' dic.protnameid %}">{{protname}}</a> (
 			   			{% for psid in dic.protseqid %}
 				   			<a href="{% url 'query-proteinseqinfo' psid %}">{{psid}}</a>{{ forloop.last|yesno:",&#44;"|safe }} 
 				   		{% endfor %}
-				   		){{forloop.last|yesno:",&#44;"|safe }}  
+				   		){{forloop.last|yesno:",&#44;"|safe }}
+				   		{% empty %}
+				   			No proteins identified
 			   		{%endfor%}</td>
 			</tr>
 		</table>
 		<h2>DNA sequence</h2>
 		<p class="wrapped nokern">{{ object.dnaseq.seq }}</p>
 
-		<h2>Predicted Protein Sequences:</h2>
-		{% for protein in object.proteinseq.all %}
-			<div class= "SearchResult">
-				<table class= "infotable proteinseqtable">
-					<tr>
-						<th scope="row">Protein ID: </th>
-						<td>{{protein.id}}</td>
-					</tr>
-					<tr>
-						<th scope="row">Protein Name: </th>
-						<td>{{protein.proteinname.name}}</td>
-					</tr>
-				</table>
-				<p class= "wrapped nokern">{{protein.seq}}</p>
-			</div>
-			{% empty %}
-				<p>No protein sequences predicted</p>
-		{% endfor %}
+
 {% endblock content %}

@@ -13,9 +13,9 @@
 		</tr>
 	  {% for hit in proteins %}
 	    <tr>
-		    <th>  {{ hit.id }} </th>
+		    <th> <a href="{% url 'query-proteinseqinfo' hit.id %}"> {{ hit.id }} </a> </th>
 		   	<td> <a href="{% url 'query-proteinfamilyinfo' hit.dnarecord.family.id %}">{{ hit.dnarecord.family.name }} </td>
-		    <td> <a href="{% url 'query-proteinnameinfo' hit.proteinname.id %}">{{ hit.proteinname.name }} </a> </td>
+		    <td><span class= "RemoveComma">{% for protname in hit.proteinname_set.all %}<a href="{% url 'query-proteinnameinfo' protname.id %}">{{protname.name}}</a>, {% endfor %}</span></td>
 		    <td> <a href="{% url 'query-dnarecinfo' hit.dnarecord.id %}">{{ hit.dnarecord.id}} </a> </td>
 		    <td> {{ hit.dnarecord.coords}} </td>
 		</tr>

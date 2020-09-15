@@ -4,6 +4,11 @@
 
 	{% if dnarec %}
 	<table class="querytable">
+		<colgroup>
+			<col class="five" />
+			<col class="ten" />
+			<col class="twenty" />
+  		</colgroup>
 		<tr>
 			<th scope=column>ID</th>
 			<th scope=column>Genomic Coordinates</th>
@@ -15,15 +20,13 @@
 		    <tr>
 			    <th> <a href="{% url 'query-dnarecinfo' hitrec.id%}"> {{ hitrec.id }} </a> </th>
 			   	<td> {{ hitrec.coords }} </td>
-			   	<td>{% for protname, dic in hitrec.GetProteinNamesIDs.items %}
-			   			<a href="{% url 'query-proteinnameinfo' dic.pnid %}">{{protname}}</a> (
-			   			{% for psid in dic.psids %}
+			   	<td> {% for protname, dic in hitrec.GetProteinNamesIDs.items %}
+			   			<a href="#">{{protname}}</a> (
+			   			{% for psid in dic.protseqid %}
 				   			<a href="{% url 'query-proteinseqinfo' psid %}">{{psid}}</a>{{ forloop.last|yesno:",&#44;"|safe }} 
 				   		{% endfor %}
 				   		){{forloop.last|yesno:",&#44;"|safe }}  
 			   		{%endfor%}
-			   		
-
 			   	</td>
 			</tr>
 		  {% endfor %}

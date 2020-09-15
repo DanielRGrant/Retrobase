@@ -1,8 +1,36 @@
 {%extends "query/base.html" %}
 {% block content %}
-	{% for pn in protnames %}
-		{% for p in pn.NameList %}
-			<p>{{p}}</p>
-		{% endfor %}
-	{% endfor %}
+
+	<h1>Search Results for <i>"{{search_input}}"</i></h1>
+	{% if protein_names %}
+	  {%for pn in protein_names%}
+	  <div class="SearchResult">
+	    <h3><a href="{% url 'query-proteinnameinfo' pn.id %}" >{{pn.name}}</a></h3>
+	    <p>{{pn.name}} is a protein of the {{pn.superfamily.name}} superfamily/class of retrotransposons.</p>
+	  </div>
+	  {%endfor%}
+	{% endif %}
+	{% if family %}
+	  {%for fam in family%}
+	  <div class="SearchResult">
+	    <h3><a href="{% url 'query-proteinfamilyinfo' fam.id %}" >{{fam.name}}</a></h3>
+	    <p>{{fam.name}} is a family of the {{fam.superfamily.name}} superfamily/class of retrotransposons.</p>
+	  </div>
+	  {%endfor%}
+	{% endif %}
+	{% if superfamily %}
+	  {%for supfam in superfamily%}
+	  <div class="SearchResult">
+	    <h3><a href="{% url 'query-proteinsuperfamilyinfo' supfam.id %}" >{{supfam.name}}</a></h3>
+	    <p>{{supfam.name}} is a superfamily/class of retrotransposons.</p>
+	  </div>
+	  {%endfor%}
+	{% endif %}	
+
+
+
+
+	{% if error %}
+	<p>{{error}}</p>
+	{% endif %}
 {% endblock content %}

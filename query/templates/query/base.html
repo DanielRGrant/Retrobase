@@ -26,7 +26,7 @@
     <a href="#" class="menu-button"> Evolutionary Trees</a>
     <a href="{% url 'expressionatlas-home' %}" class="menu-button">Tissue Expression Atlas</a>
         
-    <form class="menu-button" type="POST" method="POST" action='{% url "query-MainSearchBar" %}'>
+    <form class="menu-button" type="POST" method="POST" action='{% url "query-MainSearchBarResults" %}'>
         {% csrf_token %}
         <input  id="search_input" type="text" method="POST" name="search_input" placeholder="Protein, Class or Family..." >
         <button id="search_submit" type="submit" >Search</button>
